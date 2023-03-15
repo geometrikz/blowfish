@@ -21,9 +21,12 @@
       {{ .Site.Author.name | default .Site.Title }}
     </h1>
     {{ with .Site.Author.headline }}
-      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
+      {{/*  <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
         {{ . | markdownify | emojify }}
-      </h2>
+      </h2>  */}}
+      {{/*  {{< typeit tag=div>}}  */}}
+        {{ . | markdownify | emojify }}
+      {{/*  {{< /typeit >}}  */}}
     {{ end }}
     <div class="mt-1 text-2xl">
       {{ partialCached "author-links.html" . }}
